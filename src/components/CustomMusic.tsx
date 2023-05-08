@@ -24,6 +24,9 @@ const CustomMusic = () => {
   };
 
   return (
+
+
+
     <div className="rounded-lg flex bg-white shadow-xl w-[400px] h-[50px]">
       <div className="flex items-center space-x-4 px-3 py-2">
         <img
@@ -56,7 +59,7 @@ const CustomMusic = () => {
         />
 
         <div className="flex flex-col flex-wrap w-[200px]">
-          <div className="  ">
+          <div className="flex items-center justify-center ">
             <span>Western Hero</span>
           </div>
           <Slider
@@ -79,6 +82,11 @@ const CustomMusic = () => {
          <Slider vertical defaultValue={20} />
 
         </div> */}
+
+       <div className=" h-[40px] w-[40px] relative">
+        <img src="/src/assets/volume.png" alt="next" className="w-[15px] h-[15px] cursor-pointer absolute top-[50%] left-[50%] translate-y-[-50%] translate-X-[-50%] z-30"/>
+
+      </div>
 
         
       </div>
