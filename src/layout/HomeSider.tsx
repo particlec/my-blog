@@ -32,7 +32,7 @@ function getItem(
 // https://www.iconfont.cn/user/detail?spm=a313x.7781069.1998910419.53&uid=4193520&nid=8N7pZVovdwFv&userViewType=collections 图标替换
 
 const items: MenuItem[] = [
-  getItem('Option 1', '1', <PieChartOutlined />),
+  getItem('首页', '1', <PieChartOutlined />),
   getItem('Option 2', '2', <DesktopOutlined />),
   getItem('Option 3', '3', <ContainerOutlined />),
 

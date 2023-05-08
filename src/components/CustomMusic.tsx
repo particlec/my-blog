@@ -3,6 +3,7 @@ import { Slider } from 'antd';
 import next from '../assets/next.png';
 import pause from '../assets/pause.png';
 import play from '../assets/play.png';
+import volume from '../assets/volume.png';
 
 const CustomMusic = () => {
   const [isPlay, setIsPlay] = useState(false);
@@ -54,7 +55,7 @@ const CustomMusic = () => {
           onClick={playMusic}
         />
 
-        <div className="flex flex-col flex-wrap">
+        <div className="flex flex-col flex-wrap w-[200px]">
           <div className="  ">
             <span>Western Hero</span>
           </div>
@@ -65,7 +66,23 @@ const CustomMusic = () => {
             className=" "
           />
         </div>
+
+        
+
+        {/* <div className="absolute h-[40px]">
+        <img
+          src={volume}
+          alt="next"
+          className="w-[15px] h-[15px] cursor-pointer"
+          onClick={playMusic}
+        />
+         <Slider vertical defaultValue={20} />
+
+        </div> */}
+
+        
       </div>
+
     </div>
   );
 };
