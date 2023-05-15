@@ -9,11 +9,11 @@ opacity: .9
 const LayoutHome = () => {
   return (
     <div className="bg-gray-100 h-[100%]">
-        最大宽度max-w-7xl-1280px、mx-auto--容器居中、py-6 ---上下padding6xp、 sm 当到宽度为642px 之前 paddding左右6,上下8 
+        {/* 最大宽度max-w-7xl-1280px、mx-auto--容器居中、py-6 ---上下padding6xp、 sm 当到宽度为642px 之前 paddding左右6,上下8  */}
       <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-         mx-auto--容器居中、没有最大宽度
+         {/* mx-auto--容器居中、没有最大宽度 */}
         <div className="mx-auto max-w-none">
-        overflow-auto在元素的内容溢出该元素的边界时向该元素添加滚动条、bg-white背景色为白色、增加阴影、rounded-lg 半径圆角
+        {/* overflow-auto在元素的内容溢出该元素的边界时向该元素添加滚动条、bg-white背景色为白色、增加阴影、rounded-lg 半径圆角 */}
           <div className="overflow-hidden bg-white shadow sm:rounded-lg">
             <ul role="list" className="divide-y divide-gray-200 opacity-25">
               <li>
