@@ -18,7 +18,7 @@ const MenuLayout = () => {
                 <HomeSider />
               </Sider>
               <Layout>
-                <Content className="p-24 mh-[280px] overflow-y-auto">
+                <Content className="p-12 mh-[280px] overflow-y-auto">
                   <Outlet />
                 </Content>
               </Layout>

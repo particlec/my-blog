@@ -2,6 +2,7 @@ import { Navigate } from "react-router-dom";
 import { ReactNode } from "react";
 import MenuLayout from "../layout/MenuLayout";
 import Home from "../views";
+import PhotoFrameDisplay from "../views/album";
 
 
 type KZRoute = {
@@ -19,6 +20,12 @@ const CustomRouter: KZRoute[] = [
     component: <Home />,
     path: "/home",
   },
+  {
+    layout: <MenuLayout />,
+    component: <PhotoFrameDisplay />,
+    path: "/Photo",
+  },
+
   { component: <Navigate to="/home" />, path: "*" },
 ];
 

@@ -16,6 +16,7 @@ import calendar from '../assets/sider/calendar.png';
 import friend from '../assets/sider/friend.png';
 import home from '../assets/sider/home.png';
 import my from '../assets/sider/my.png';
+import { useNavigate } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -36,10 +37,11 @@ function getItem(
 }
 // https://www.iconfont.cn/user/detail?spm=a313x.7781069.1998910419.53&uid=4193520&nid=8N7pZVovdwFv&userViewType=collections 图标替换
 
+
 const items: MenuItem[] = [
   getItem(
     '首页',
-    '1',
+    '/home',
     <img src={home} alt="home" className="w-[17px] h-[19px]" />
   ),
   getItem(
@@ -49,7 +51,7 @@ const items: MenuItem[] = [
   ),
   getItem(
     '相册',
-    '3',
+    '/Photo',
     <img src={album} alt="album" className="w-[17px] h-[19px]" />
   ),
   getItem(
@@ -81,11 +83,15 @@ const items: MenuItem[] = [
   ]),
 ];
 const HomeSider = () => {
+  const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
-  //    30多
+  
+  const onClick = (prop:any)=>{
+    navigate(prop.key)
+  }
 
   return (
     <div>
@@ -111,6 +117,7 @@ const HomeSider = () => {
         inlineCollapsed={collapsed}
         items={items}
         className="mr-1.5  text-gray-400"
+        onClick={onClick}
       />
     </div>
   );
