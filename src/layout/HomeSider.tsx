@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Menu } from 'antd';
 import type { MenuProps } from 'antd';
 import {
@@ -16,7 +17,6 @@ import calendar from '../assets/sider/calendar.png';
 import friend from '../assets/sider/friend.png';
 import home from '../assets/sider/home.png';
 import my from '../assets/sider/my.png';
-import { useNavigate } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -36,7 +36,6 @@ function getItem(
   } as MenuItem;
 }
 // https://www.iconfont.cn/user/detail?spm=a313x.7781069.1998910419.53&uid=4193520&nid=8N7pZVovdwFv&userViewType=collections 图标替换
-
 
 const items: MenuItem[] = [
   getItem(
@@ -88,10 +87,10 @@ const HomeSider = () => {
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
-  
-  const onClick = (prop:any)=>{
-    navigate(prop.key)
-  }
+
+  const onClick = (prop: any) => {
+    navigate(prop.key);
+  };
 
   return (
     <div>

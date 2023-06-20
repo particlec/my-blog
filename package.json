@@ -13,6 +13,7 @@
     "@ant-design/icons": "^5.0.1",
     "@heroicons/react": "^2.0.17",
     "antd": "^5.4.6",
+    "pnpm": "^8.6.3",
     "react": "^18.2.0",
     "react-aplayer": "^1.0.0",
     "react-dom": "^18.2.0",

@@ -3,6 +3,8 @@ import { ReactNode } from "react";
 import MenuLayout from "../layout/MenuLayout";
 import Home from "../views";
 import PhotoFrameDisplay from "../views/album";
+import ArticleDirect from "../views/home/ArticleDirect";
+import ArticleDetails from "../views/home/ArticleDetails";
 
 
 type KZRoute = {
@@ -15,16 +17,32 @@ type KZRoute = {
 };
 
 const CustomRouter: KZRoute[] = [
-  {
-    layout: <MenuLayout />,
-    component: <Home />,
-    path: "/home",
-  },
+  // {
+  //   layout: <MenuLayout />,
+  //   component: <Home />,
+  //   path: "/home",
+  // },
   {
     layout: <MenuLayout />,
     component: <PhotoFrameDisplay />,
     path: "/Photo",
   },
+
+  {
+    layout: <MenuLayout />,
+    component: <ArticleDirect />,
+    path: "/home",
+  },
+
+  {
+    layout: <MenuLayout />,
+    component: <ArticleDetails />,
+    path: "/home/articleDetails/:id",
+  },
+
+  
+
+  
 
   { component: <Navigate to="/home" />, path: "*" },
 ];
