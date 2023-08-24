@@ -9,8 +9,6 @@ import './main.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <ConfigProvider locale={zhCN}>
-    {/* <LayoutHome/> */}
-    {/* <App /> */}
     <RouterProvider router={router} />
   </ConfigProvider>
 );

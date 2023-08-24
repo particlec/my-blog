@@ -37,6 +37,7 @@ const PhotoFrameDisplay = () => {
         const shuffledPhotos = shuffleArray(data.photos); // 随机排序照片数组
         setPhotos(shuffledPhotos as any);
       };
+      
   
       fetchPhotos();
     }, []);
@@ -60,6 +61,7 @@ const PhotoFrameDisplay = () => {
               <Card
                 cover={<img alt={photo.title} src={photo.src} className="h-full w-full object-cover" />}
                 hoverable
+                
               >
                 <Card.Meta title={photo.title} />
               </Card>

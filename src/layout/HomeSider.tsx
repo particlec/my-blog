@@ -2,15 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Menu } from 'antd';
 import type { MenuProps } from 'antd';
-import {
-  AppstoreOutlined,
-  ContainerOutlined,
-  DesktopOutlined,
-  MailOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  PieChartOutlined,
-} from '@ant-design/icons';
+import { AppstoreOutlined } from '@ant-design/icons';
 import logo from '../assets/logo.png';
 import album from '../assets/sider/album.png';
 import calendar from '../assets/sider/calendar.png';
@@ -80,6 +72,70 @@ const items: MenuItem[] = [
       getItem('Option 12', '12'),
     ]),
   ]),
+  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
+  ]),
+  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
+  ]),
+  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
+  ]),
+  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
+  ]),
+  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
+  ]),
+
+  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
+  ]),
+  getItem('Navigation Two', 'sub2', <AppstoreOutlined />, [
+    getItem('Option 9', '9'),
+    getItem('Option 10', '10'),
+
+    getItem('Submenu', 'sub3', null, [
+      getItem('Option 11', '11'),
+      getItem('Option 12', '12'),
+    ]),
+  ]),
 ];
 const HomeSider = () => {
   const navigate = useNavigate();
@@ -93,7 +149,7 @@ const HomeSider = () => {
   };
 
   return (
-    <div>
+    <>
       <div className="flex gap-x-4 h-[80px] m-6">
         <img
           className=" flex-none rounded-full bg-gray-50 basis-1/2 "
@@ -106,7 +162,6 @@ const HomeSider = () => {
             Just like floating bubbles
           </p>
           {/* <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.email}</p> */}
-          
         </div>
       </div>
       <Menu
@@ -116,10 +171,10 @@ const HomeSider = () => {
         theme="light"
         inlineCollapsed={collapsed}
         items={items}
-        className="mr-1.5  text-gray-400"
+        className="mr-1.5  text-gray-400 overflow-y-auto h-[100%] "
         onClick={onClick}
       />
-    </div>
+    </>
   );
 };
 export default HomeSider;

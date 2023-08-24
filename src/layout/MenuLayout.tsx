@@ -14,11 +14,15 @@ const MenuLayout = () => {
               <HomeHeader />
             </Header>
             <Layout>
-              <Sider width={200} className="max-sm:hidden" theme="light">
+              <Sider
+                width={200}
+                className="max-sm:hidden h-[100%]"
+                theme="light"
+              >
                 <HomeSider />
               </Sider>
               <Layout>
-                <Content className="p-12 mh-[280px] overflow-y-auto bg-[#EFEFEF] ">
+                <Content className="p-12 mh-[280px] overflow-y-auto bg-[#F3F4F9] h-[100%]">
                   <Outlet />
                 </Content>
               </Layout>
